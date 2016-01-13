@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<problem class="">
+  <input>
+    <fleet cars="" capacity="" speed="">
+    </fleet>
+    <map>
+      <clients>
+        <client x="" y="" unload="">
+          <size></size>
+          <available>
+            <start>
+              <time></time>
+            </start>
+            <end>
+              <time></time>
+            </end>
+          </available>
+        </client>
+      </clients>
+
+      <depots>
+        <depot x="" y="">
+          <working>
+            <start>
+              <time></time>
+            </start>
+            <end>
+              <time></time>
+            </end>
+          </working>
+        </depot>
+      </depots>
+    </map>
+  </input>
+</problem>

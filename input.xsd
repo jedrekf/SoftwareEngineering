@@ -1,0 +1,102 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="problem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="input">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fleet">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="cars"/>
+                      <xs:attribute type="xs:string" name="capacity"/>
+                      <xs:attribute type="xs:string" name="speed"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="map">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="clients">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="client">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="size"/>
+                                <xs:element name="available">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="start">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="time"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="end">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="time"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="x"/>
+                              <xs:attribute type="xs:string" name="y"/>
+                              <xs:attribute type="xs:string" name="unload"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="depots">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="depot">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="working">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="start">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="time"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="end">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="time"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:integer" name="x"/>
+                              <xs:attribute type="xs:inetger" name="y"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="class"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
